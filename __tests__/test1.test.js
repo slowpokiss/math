@@ -2,25 +2,25 @@ import Daemon from '../src/Daemon';
 import Magician from '../src/Magician';
 
 test('Get attack for Daemon', () => {
-  const dae = new Daemon(2);
-  dae.setAttack(100);
-  expect(dae.getAttack()).toBe(90);
+  const dae = new Daemon(2, false);
+  dae.set(100);
+  expect(dae.get()).toBe(90);
 });
 
 test('Get stoned attack for Daemon', () => {
-  const dae = new Daemon(2);
-  dae.setStonedAttack(100);
-  expect(dae.getStonedAttack()).toBe(85);
+  const dae = new Daemon(2, true);
+  dae.set(100);
+  expect(dae.get()).toBe(85);
 });
 
 test('Get attack for Magician', () => {
-  const mag = new Magician(2);
-  mag.setAttack(100);
-  expect(mag.getAttack()).toBe(90);
+  const mag = new Magician(2, false);
+  mag.set(100);
+  expect(mag.get()).toBe(90);
 });
 
 test('Get stoned attack for Magician', () => {
-  const mag = new Magician(2);
-  mag.setStonedAttack(100);
-  expect(mag.getStonedAttack()).toBe(85);
+  const mag = new Magician(2, true);
+  mag.set(100);
+  expect(mag.get()).toBe(85);
 });

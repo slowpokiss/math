@@ -1,24 +1,20 @@
 import math from './math';
 
 export default class Daemon extends math {
-  constructor(square) {
+  constructor(square, stoned) {
     super();
     this.square = square;
+    this.stoned = stoned;
   }
 
-  setStonedAttack(attack) {
+  set(attack) {
     this.attack = attack;
   }
 
-  getStonedAttack() {
+  get() {
+    if (!this.stoned) {
+      return this.retAttack();
+    }
     return this.retStonedAttack();
-  }
-
-  setAttack(attack) {
-    this.attack = attack;
-  }
-
-  getAttack() {
-    return this.retAttack();
   }
 }
