@@ -1,20 +1,9 @@
-import math from './math';
+import ext from './ext';
 
-export default class Magician extends math {
+export default class Magician extends ext {
   constructor(square, stoned) {
     super();
     this.square = square;
     this.stoned = stoned;
-  }
-
-  set(attack) {
-    this.attack = attack;
-  }
-
-  get() {
-    if (!this.stoned) {
-      return this.retAttack();
-    }
-    return this.retStonedAttack();
   }
 }
