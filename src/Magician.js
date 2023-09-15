@@ -1,6 +1,6 @@
-import ext from './ext';
+import math from './math';
 
-export default class Magician extends ext {
+export default class Magician extends math {
   constructor(square, stoned) {
     super();
     this.square = square;
