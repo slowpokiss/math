@@ -1,20 +1,17 @@
 export default class math {
-  set(attack) {
-    this.attack = attack;
+  set attack(attack) {
+    this._attack = attack;
   }
 
-  get() {
-    if (!this.stoned) {
-      return this.retAttack();
-    }
-    return this.retStonedAttack();
+  get attack() {
+    return this._attack - (this.square - 1) * 10;
   }
 
-  retAttack() {
-    return this.attack - (this.square - 1) * 10;
+  set stoned(IsStoned) {
+    this._stoned = IsStoned;
   }
 
-  retStonedAttack() {
-    return this.retAttack() - Math.log2(this.square) * 5;
+  get stoned() {
+    return this.attack - Math.log2(this.square) * 5;
   }
 }

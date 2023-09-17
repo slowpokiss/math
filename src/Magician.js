@@ -1,9 +1,8 @@
 import math from './math';
 
 export default class Magician extends math {
-  constructor(square, stoned) {
+  constructor(square) {
     super();
     this.square = square;
-    this.stoned = stoned;
   }
 }
