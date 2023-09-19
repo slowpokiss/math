@@ -11,7 +11,7 @@ test('Get stoned attack for Daemon', () => {
   const dae = new Daemon(2);
   dae.attack = 100;
   dae.stoned = true;
-  expect(dae.stoned).toBe(85);
+  expect(dae.attack).toBe(85);
 });
 
 test('Get attack for Magician', () => {
@@ -24,5 +24,13 @@ test('Get stoned attack for Magician', () => {
   const mag = new Magician(2);
   mag.attack = 100;
   mag.stoned = true;
-  expect(mag.stoned).toBe(85);
+  expect(mag.attack).toBe(85);
+});
+
+
+test('Get stoned for Magician', () => {
+  const mag = new Magician(2);
+  mag.attack = 100;
+  mag.stoned = true;
+  expect(mag.stoned).toBe(true);
 });

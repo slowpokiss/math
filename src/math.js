@@ -4,14 +4,17 @@ export default class math {
   }
 
   get attack() {
+    if (this._stoned) {
+      return this._attack - Math.log2(this.square) * 5 - (this.square - 1) * 10;
+    }
     return this._attack - (this.square - 1) * 10;
   }
 
-  set stoned(IsStoned) {
-    this._stoned = IsStoned;
+  set stoned(isStoned) {
+    this._stoned = isStoned;
   }
 
   get stoned() {
-    return this.attack - Math.log2(this.square) * 5;
+    return this._stoned;
   }
 }
